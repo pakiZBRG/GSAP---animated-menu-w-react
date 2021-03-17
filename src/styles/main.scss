@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$pink: #f87b90;
+$white: #fcfcfc;
+$black: #222;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2rem;
+
+    &__menu{
+        border: none;
+        background: none;
+        outline: none;
+        font-family: 'Poppins';
+        text-transform: uppercase;
+        cursor: pointer;
+        z-index: 10;
+    }
+}
+
+/* CONTENT */
+.content{
+    width: 50%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img{
+        width: 100%;
+    }
+}
+
+/* PAGE */
+.center-div{
+    height: 50vh;
+    width: 100%;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MENU */
+.container{
+    display: none;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &-layer-secondary-background{
+        background: $black;
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &-layer{
+        position: relative;
+        height: 100%;
+        background: $pink;
+        color: $white;
+        overflow: hidden;
+
+        &-cartoon{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__links{
+        margin: 3rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        ul {
+            flex-basis: 70%;
+            list-style: none;
+
+            li{
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                height: 10rem;
+                text-transform: uppercase;
+                font-size: 6.5rem;
+                font-weight: bold;
+                a {
+                    position: absolute;
+                    color: $white;
+                    text-decoration: none;
+                    &:hover{
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        &--text{
+            flex-basis: 20%;
+        }
+    }
+
+    &__content{
+        width: 80%;
+        margin: 0 auto;
+
+        & h2{
+            display: inline;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-right: 2rem;
+        }
+
+        & span{
+            margin: 0 2rem;
+            font-size: 1.6rem;
+        }
+    }
+}
